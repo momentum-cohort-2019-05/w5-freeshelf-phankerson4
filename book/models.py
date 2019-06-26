@@ -26,4 +26,6 @@ class Book(models.Model):
         return reverse('book-detail', args=[str(self.id)])
 
 class Author(models.Model):
-    pass
+    name = models.CharField(max_length=100, default='anonymous')
+    def __str__(self):
+        return self.name
