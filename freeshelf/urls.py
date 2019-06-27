@@ -20,7 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
-# Use include() to add paths from the catalog application 
+# Use include() to add paths from the book application 
 from django.urls import include
 from django.urls import path
 
