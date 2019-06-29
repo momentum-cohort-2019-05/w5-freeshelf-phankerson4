@@ -1,12 +1,15 @@
 from django.db import models
 from django.urls import reverse # Used to generate URLs by reversing the URL patterns
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Category(models.Model):
     name=models.CharField(max_length=50)
+    
 
     class Meta:
         ordering = ["name"]
+        verbose_name = "Categorie"
 
     def __str__(self):
         return self.name
