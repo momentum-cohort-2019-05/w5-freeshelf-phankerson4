@@ -22,10 +22,11 @@ urlpatterns = [
 
 # Use include() to add paths from the book application 
 from django.urls import include
-from django.urls import path
+from django.urls import path, include 
 
 urlpatterns += [
     path('book/', include('book.urls')),
+    path('accounts/', include('registration.backends.simple.urls')),
 ]
 
 #Add URL maps to redirect the base URL to our application

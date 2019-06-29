@@ -9,6 +9,8 @@ verify_ssl = true
 django = "*"
 gunicorn = "*"
 django-heroku = "*"
+dnago-registration-redux = "*"
+django-registration-redux = "*"
 
 [requires]
 python_version = "3.7"
