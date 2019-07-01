@@ -1,29 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  {% block title %}<title>Freeshelf</title>{% endblock %}
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <!-- Add additional CSS in static file -->
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" />
+  <title>Freeshelf</title>
 </head>
-<body>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-2">
-      {% block sidebar %}
-        <ul class="sidebar-nav">
-          <li><a href="{% url 'index' %}">Home</a></li>
-          <li><a href="{% url 'books' %}">Books</a></li>
-          <li><a href=""> Authors</a></li>
-          <li><a href=""> Categories</a></li>
-        </ul>
-     {% endblock %}
-      </div>
-      <div class="col-sm-10 ">{% block content %}{% endblock %}</div>
+
+
+<body class="sans-serif pv2 ph4">
+  <header class="flex items-center justify-between bg-green white ph3">
+    <div id="title">
+      <h1 class="white">Freeshelf</h1>
     </div>
-  </div>
+    <div id="account-menu">
+      <a class="washed-blue" href="#">Login</a> | <a class="washed-blue" href="#">Register</a>
+    </div>
+  </header>
+  <nav id="category-nav" class="flex items-center">
+    <div>
+      Books by category:
+    </div>
+    <ul class="list ml1 pa0 flex flex-wrap">
+      <li class="mr2 pr2 bw1 br"><a href="#">CSS</a></li>
+      <li class="mr2 pr2 bw1 br"><a href="#">HTML</a></li>
+      <li class="mr2 pr2 bw1 br"><a href="#">JavaScript</a></li>
+      <li class="mr2 pr2 bw1 br"><a href="#">Python</a></li>
+      <li class=""><a href="#">R</a></li>
+    </ul>
+  </nav>
+
+  <div>
+
+  
+  {% block body %}
+
+
+  
+  {% endblock %}
+
+</div>
+
 </body>
+
 </html>
